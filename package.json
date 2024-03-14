@@ -1,15 +1,10 @@
 {
-  "name": "proyecto",
+  "name": "mi-proyecto",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/server.js",
+  "description": "Descripción de mi proyecto",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
   }
 }

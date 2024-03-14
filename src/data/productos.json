@@ -1,17 +1,47 @@
 [
     {
-      "id": "1",
-      "title": "Samsung Ultra s24",
-      "description": "Celular de Samsung",
-      "code": "ABC123",
-      "price": 10.99
+      "id": "p1",
+      "title": "Samsung Galaxy S21",
+      "description": "El último teléfono de Samsung con características avanzadas",
+      "code": "SGS21",
+      "price": 999,
+      "status": true,
+      "stock": 20,
+      "category": "Samsung",
+      "thumbnails": ["samsung_galaxy_s21_1.jpg", "samsung_galaxy_s21_2.jpg"]
     },
     {
-      "id": "2",
-      "title": "Iphone 15 pro max",
-      "description": "Celular de Apple",
-      "code": "DEF456",
-      "price": 20.99
+      "id": "p2",
+      "title": "Samsung Galaxy Note 20 Ultra",
+      "description": "El teléfono insignia de Samsung con lápiz óptico y pantalla grande",
+      "code": "SGN20U",
+      "price": 1199,
+      "status": true,
+      "stock": 15,
+      "category": "Samsung",
+      "thumbnails": ["samsung_galaxy_note_20_ultra_1.jpg", "samsung_galaxy_note_20_ultra_2.jpg"]
+    },
+    {
+      "id": "p3",
+      "title": "iPhone 13 Pro",
+      "description": "El último iPhone con una potente cámara y rendimiento",
+      "code": "IP13P",
+      "price": 1099,
+      "status": true,
+      "stock": 25,
+      "category": "iPhone",
+      "thumbnails": ["iphone_13_pro_1.jpg", "iphone_13_pro_2.jpg"]
+    },
+    {
+      "id": "p4",
+      "title": "iPhone 13",
+      "description": "El nuevo iPhone con todas las características esenciales",
+      "code": "IP13",
+      "price": 799,
+      "status": true,
+      "stock": 30,
+      "category": "iPhone",
+      "thumbnails": ["iphone_13_1.jpg", "iphone_13_2.jpg"]
     }
   ]
   
