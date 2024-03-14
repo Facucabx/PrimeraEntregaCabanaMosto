@@ -3,11 +3,14 @@ const productsController = require('../controllers/productsController');
 
 const productsRouter = express.Router();
 
+// Ruta para listar todos los productos
 productsRouter.get('/', (req, res) => {
-    const products = productsController.getAllProducts();
+    const limit = req.query.limit; // Obtener el parámetro de consulta limit, si está presente
+    const products = productsController.getAllProducts(limit);
     res.json(products);
 });
 
+// Ruta para obtener un producto por su ID
 productsRouter.get('/:pid', (req, res) => {
     const productId = req.params.pid;
     const product = productsController.getProductById(productId);

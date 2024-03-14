@@ -3,24 +3,28 @@ const cartsController = require('../controllers/cartsController');
 
 const cartsRouter = express.Router();
 
-cartsRouter.get('/:cid', (req, res) => {
-    const cartId = req.params.cid;
-    const cart = cartsController.getCartById(cartId);
-    if (cart) {
-        res.json(cart);
-    } else {
-        res.status(404).json({ message: 'Cart not found' });
-    }
+// Ruta para crear un nuevo carrito
+cartsRouter.post('/', (req, res) => {
+    const newCart = cartsController.createCart();
+    res.json(newCart);
 });
 
+// Ruta para listar los productos de un carrito específico
+cartsRouter.get('/:cid', (req, res) => {
+    const cartId = req.params.cid;
+    const cartProducts = cartsController.getCartProducts(cartId);
+    res.json(cartProducts);
+});
+
+// Ruta para agregar un producto al carrito seleccionado
 cartsRouter.post('/:cid/product/:pid', (req, res) => {
     const cartId = req.params.cid;
     const productId = req.params.pid;
     const success = cartsController.addProductToCart(cartId, productId);
     if (success) {
-        res.json({ message: 'Product added to cart successfully' });
+        res.json({ message: 'Producto agregado exitosamente' });
     } else {
-        res.status(404).json({ message: 'Cart not found' });
+        res.status(404).json({ message: 'Ocurrio un error, el producto no se agrego.' });
     }
 });
 

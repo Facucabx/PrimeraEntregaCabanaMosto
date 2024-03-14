@@ -1,0 +1,17 @@
+[
+    {
+      "id": "1",
+      "title": "Samsung Ultra s24",
+      "description": "Celular de Samsung",
+      "code": "ABC123",
+      "price": 10.99
+    },
+    {
+      "id": "2",
+      "title": "Iphone 15 pro max",
+      "description": "Celular de Apple",
+      "code": "DEF456",
+      "price": 20.99
+    }
+  ]
+  

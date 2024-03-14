@@ -14,16 +14,15 @@ const cartsController = {
         let carts = JSON.parse(cartsData);
         const index = carts.findIndex(cart => cart.id === id);
         if (index !== -1) {
-            const productIndex = carts[index].products.findIndex(product => product === productId);
-            if (productIndex !== -1) {
-                carts[index].products.push(productId);
-            } else {
-                carts[index].products.push(productId);
-            }
+            carts[index].products.push(productId);
             fs.writeFileSync(cartsFilePath, JSON.stringify(carts, null, 2));
             return true;
         }
         return false;
+    },
+    getAllCarts: () => {
+        const cartsData = fs.readFileSync(cartsFilePath, 'utf-8');
+        return JSON.parse(cartsData);
     }
 };
 
